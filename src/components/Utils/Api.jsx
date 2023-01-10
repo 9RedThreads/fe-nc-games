@@ -8,3 +8,19 @@ export const getReviews = () => {
         return res.data.review
     })
 }
+
+export const getReviewById = (id) => {
+    return axios
+    .get(`https://jcs-nc-games.onrender.com/api/reviews/${id}`)
+    .then((res) => {
+        return res.data.review
+    })
+}
+
+export const getCommentById = (id) => {
+    return axios
+    .get(`https://jcs-nc-games.onrender.com/api/reviews/${id}/comments`)
+    .then((res) => {
+        return res.data.comments
+    })
+}

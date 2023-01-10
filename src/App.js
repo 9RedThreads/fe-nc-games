@@ -10,16 +10,15 @@ import {useState} from 'react'
 
 
 function App() {
-  const [CurrUser, setCurrUser] = useState("Bobby")
 
   return (
     <div className="App">
       <Header />
       <Nav />
-      <User CurrUser={CurrUser}/>
+      <User CurrUser={'tickle122'}/>
       <Routes>
         <Route path="/" element={<ReviewList />} />
-        {/* <Route path="/:username/:review_id" element={<Review />} /> */}
+        <Route path="/:username/:review_id" element={<Review />} />
         {/* <Route path="/:username/info" element={<UserInfo/>} /> */}
       </Routes>
     </div>

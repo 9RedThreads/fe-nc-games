@@ -11,8 +11,8 @@
 
 .card {
   display: inline-grid;
-  grid-template-columns: 12vw;
-  grid-template-rows: 12vh;
+  grid-template-columns: 125px;
+  grid-template-rows: 125px;
   border: 2px solid #282c34;
   border-radius: 5px 5px 5px 5px;
   text-align: center;
@@ -22,8 +22,59 @@
 .CardPic {
   justify-self: center;
   align-self: center;
-  width: 50px;
-  height: 50px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.ReviewInfo {
+  justify-items: stretch;
+}
+
+.review-info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 4vh 4vh 4vh 4vh 24vh;
+  grid-auto-flow: row;
+  justify-items: start;
+  align-items: center;
+  margin-left: 75px;
+  margin-right: 75px;
+  padding: 25px;
+  column-gap: 12px;
+}
+
+.rImg {
+  width: 150px;
+  height: 150px;
+  justify-self: end;
+  grid-column: 1/2;
+  grid-row: 1/5;
+}
+
+.rPTag {
+  grid-column: 2/3;
+}
+
+.rBody {
+  grid-column: 1/3;
+  grid-row: 5/6;
+  justify-self: center;
+  align-self: center;
+  padding: 50px;
+  border: 2px solid #282c34;
+  border-radius: 15px;
+}
+
+.Cbox {
+  border: 2px solid #282c34;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.comment {
+  border: 2px solid #282c34;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 
