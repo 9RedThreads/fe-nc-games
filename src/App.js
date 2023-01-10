@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import { Header } from './components/Header';
+import { Nav } from './components/Nav';
+import { User } from './components/User';
+import { ReviewList } from './components/ReviewList/Review-list';
+import { Review } from './components/Review/Review';
+
+import {useState} from 'react'
 
 
 function App() {
+  const [CurrUser, setCurrUser] = useState("Bobby")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Nav />
+      <User CurrUser={CurrUser}/>
+      <Routes>
+        <Route path="/" element={<ReviewList />} />
+        {/* <Route path="/:username/:review_id" element={<Review />} /> */}
+        {/* <Route path="/:username/info" element={<UserInfo/>} /> */}
+      </Routes>
     </div>
   );
 }
