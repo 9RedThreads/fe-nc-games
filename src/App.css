@@ -66,9 +66,14 @@
 }
 
 .Cbox {
+  display: grid;
+  row-gap: 10px;
   border: 2px solid #282c34;
   border-radius: 15px;
   padding: 20px;
+  margin-left: 98px;
+  margin-right: 89px;
+
 }
 
 .comment {
