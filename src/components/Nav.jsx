@@ -1,3 +1,3 @@
 export const Nav = () => {
-    return <nav>biddle</nav>
+    return <nav>Nav bar placeholder</nav>
 }
