@@ -12,10 +12,12 @@ export const CommentInfo = ({reviewId}) => {
           })
       }, []);
 
+if (comments.length === 0) return <li className='cBox' >No comments</li>
+
     return (
-        <ul className="Cbox" >
+        <ul className="cBox" >
             {comments.map((comment)=> {
-               return <li key={comment.comment_id} className='comment' >
+               return  <li key={comment.comment_id} className='comment' >
                     <header>{comment.author}</header>
                     <p>{comment.votes}</p>
                     <p>{comment.created_at}</p>

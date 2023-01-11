@@ -21,6 +21,7 @@ export const getCommentById = (id) => {
     return axios
     .get(`https://jcs-nc-games.onrender.com/api/reviews/${id}/comments`)
     .then((res) => {
+        
         return res.data.comments
     })
 }

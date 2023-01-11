@@ -24,7 +24,7 @@ export const ReviewList = () => {
     
     return (
         <main>
-            <ul>
+            <ul className="reviewCards" >
             {reviews.map((review) => {
                 return <ReviewCard  key={review.review_id} {...review}/>
             })}
