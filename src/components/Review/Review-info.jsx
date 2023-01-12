@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getReviewById } from "../Utils/Api";
+import { Votes } from "./ReviewVotes"
 
 export const ReviewInfo = ({ reviewId }) => {
   const [isError, setIsError] = useState(false);
@@ -24,7 +25,7 @@ export const ReviewInfo = ({ reviewId }) => {
       <h4 className="rPTag" >{review.title}</h4>
       <p className="rPTag" >Made by {review.designer}</p>
       <p className="rPTag" >Reviewed by {review.owner}</p>
-      <p className="rPTag" >{review.votes}</p>
+      <Votes reviewId={reviewId} currentVotes={review.votes}/>
       <p className="rBody" >{review.review_body}</p>
     </div>
   );

@@ -76,6 +76,59 @@
   border-radius: 15px;
 }
 
+.rVotes {
+  display: inline-grid;
+  grid-template-columns: 60% 60% 60%;
+  justify-items: start;
+  font-size: xx-large;
+}
+
+.rVotesUButton {
+  justify-self: end;
+  align-self: center;
+  height: 35px;
+  width: 35px;
+  border: 2px solid #282c34;
+  border-radius: 10px 0px 0px 10px;
+  font-size: xx-large;
+}
+.rVotesUButton:hover {
+  background-color: rgb(0, 226, 30);
+}
+.rVotesUButtonClicked {
+  justify-self: end;
+  align-self: center;
+  height: 35px;
+  width: 35px;
+  border: 2px solid #282c34;
+  border-radius: 10px 0px 0px 10px;
+  font-size: xx-large;
+  background-color: rgb(0, 226, 30);
+}
+
+.rVotesDButton {
+  justify-self: start;
+  align-self: center;
+  height: 35px;
+  width: 35px;
+  border: 2px solid #282c34;
+  border-radius: 0px 10px 10px 0px;
+  font-size: x-large;
+}
+.rVotesDButton:hover {
+  background-color: rgb(226, 0, 0);
+}
+.rVotesDButtonClicked {
+  justify-self: start;
+  align-self: center;
+  height: 35px;
+  width: 35px;
+  border: 2px solid #282c34;
+  border-radius: 0px 10px 10px 0px;
+  font-size: x-large;
+  background-color: rgb(226, 0, 0);
+}
+
 .cBox {
   display: grid;
   row-gap: 10px;

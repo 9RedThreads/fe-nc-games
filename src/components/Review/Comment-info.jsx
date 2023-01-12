@@ -7,7 +7,6 @@ export const CommentInfo = ({reviewId}) => {
     useEffect(() => {
         getCommentById(reviewId)
           .then((response) => {
-            console.log(response);
             setComments(response);
           })
       }, []);

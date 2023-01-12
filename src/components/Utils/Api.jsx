@@ -21,7 +21,16 @@ export const getCommentById = (id) => {
     return axios
     .get(`https://jcs-nc-games.onrender.com/api/reviews/${id}/comments`)
     .then((res) => {
-        
+
         return res.data.comments
+    })
+}
+
+export const patchVotes = (id, vote) => {
+    return axios
+    .patch(`https://jcs-nc-games.onrender.com/api/reviews/${id}/`, { inc_votes: vote} )
+    .then((res) => {
+
+        return res.data.review
     })
 }
