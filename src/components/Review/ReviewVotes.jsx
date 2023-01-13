@@ -4,24 +4,24 @@ import { patchVotes } from "../Utils/Api"
 export const Votes = ({ currentVotes, reviewId }) => {
   const [vote, setVote] = useState(0)
   let totalVotes = currentVotes + vote
-  let upDown = 0
+  let newVote = 0
 
   useEffect(() => {
     const timer = setTimeout(() => {
       if (vote !== 0) patchVotes(reviewId, vote)
       .then((res)=>{console.log(res)})
       .catch((err)=>{
-        upDown = 0
-        setVote(upDown)
+        newVote = 0
+        setVote(newVote)
         alert('Vote failed')
       })
     }, 5000);
     return () => clearTimeout(timer)
   },[vote])
 
-function voteClicked(click){
-    (upDown===click)? upDown = 0 : upDown = click 
-    setVote(upDown)
+function voteClicked(voteClick){
+    (newVote===voteClick)? newVote = 0 : newVote = voteClick 
+    setVote(newVote)
   }
 
   return (

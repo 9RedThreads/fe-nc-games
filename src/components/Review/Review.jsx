@@ -10,10 +10,10 @@ let {review_id} = useParams()
 
 
     return (
-        <main>
+        <main className="routes">
             <ReviewInfo reviewId={review_id}/>
             <CommentInfo reviewId={review_id}/>
-            {/* <CommentInput /> */}
+            <CommentInput />
         </main>
     )
 }

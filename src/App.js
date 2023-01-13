@@ -15,8 +15,8 @@ function App() {
     <div className="App">
       <Header />
       <Nav />
-      <User CurrUser={'tickle122'}/>
-      <Routes>
+      <User className="user" CurrUser={'tickle122'}/>
+      <Routes >
         <Route path="/" element={<ReviewList />} />
         <Route path="/:username/:review_id" element={<Review />} />
         {/* <Route path="/:username/info" element={<UserInfo/>} /> */}

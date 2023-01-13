@@ -34,3 +34,11 @@ export const patchVotes = (id, vote) => {
         return res.data.review
     })
 }
+
+export const postComment = (id, comment) => {
+    return axios
+    .post(`https://jcs-nc-games.onrender.com/api/reviews/${id}/comments`, comment )
+    .then((res) => {
+        return res.data.comment
+    })
+}
