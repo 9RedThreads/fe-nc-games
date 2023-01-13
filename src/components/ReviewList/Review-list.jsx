@@ -23,7 +23,7 @@ export const ReviewList = () => {
     if (isLoading)  return <p>Loading...</p>;
     
     return (
-        <main>
+        <main className="routes">
             <ul className="reviewCards" >
             {reviews.map((review) => {
                 return <ReviewCard  key={review.review_id} {...review}/>

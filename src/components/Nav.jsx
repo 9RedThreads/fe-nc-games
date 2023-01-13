@@ -1,3 +1,3 @@
 export const Nav = () => {
-    return <nav>Nav bar placeholder</nav>
+    return <nav className="nav">Nav bar placeholder</nav>
 }
